@@ -1,0 +1,31 @@
+.navbar
+    padding: 12px 0
+    &-content
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__lists
+        display: flex
+        gap: 30px
+        align-items: center
+    &__link
+        color: $black
+        padding: 5px
+        position: relative
+        padding-bottom: 5px
+        font-size: 16px
+        line-height: 24px
+        text-align: center
+        color: $black
+        &::before
+            content: ''
+            bottom: 0
+            position: absolute
+            right: 0
+            width: 0%
+            height: 2px
+            background-color: $black
+            transition: 0.2s
+        &:hover::before
+            width: 100%
+            left: 0

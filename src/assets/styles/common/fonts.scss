@@ -1,0 +1,13 @@
+$BaiJamjuree: ('Bold', 700),
+              ('SemiBold', 600),
+              ('Medium', 500),
+              ('Regular', 400),
+              ('Light', 300);
+
+@each $name, $weight in $BaiJamjuree{
+    @font-face{
+        font-family: 'BaiJamjuree';
+        src: url("@/assets/fonts/BaiJamjuree-#{$name}.ttf");
+        font-weight: $weight;
+    }
+}

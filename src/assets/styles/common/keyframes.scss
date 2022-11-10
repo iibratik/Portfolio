@@ -1,0 +1,16 @@
+@keyframes rotation360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes scale05 {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.7);
+    }
+}
