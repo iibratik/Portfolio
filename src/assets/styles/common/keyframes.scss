@@ -6,11 +6,11 @@
     transform: rotate(359deg);
   }
 }
-@keyframes scale05 {
+@keyframes scaleAndRotate {
     from{
-        transform: scale(1);
+        transform: scale(1) rotate(0deg);
     }
     to{
-        transform: scale(1.7);
+        transform: scale(1.7) rotate(-359deg);
     }
 }

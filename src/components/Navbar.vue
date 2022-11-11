@@ -10,9 +10,37 @@ nav.navbar
                 router-link.navbar__link(to="/about") About
             li.navbar__list
                 router-link.navbar__link(to="/contact") Contact
-        white-btn(@click="$router.push('/contacts')") Let's talk
+        .navbar__btns
+          icon-btn(@click="switchTheme")
+            transition(name="switching-icons")
+              i.fas.fa-moon(v-if="themeVar")
+              i.fas.fa-sun(v-else)
+          white-btn(@click="$router.push('/contacts')") Let's talk
 </template>
 
 <script lang="ts">
-export default {}
+import { defineComponent } from 'vue'
+export default defineComponent({
+  data() {
+    return {
+      themeVar: true,
+    }
+  },
+  methods: {
+    switchTheme() {
+      this.themeVar = !this.themeVar
+      const whiteVar = getComputedStyle(
+        document.documentElement
+      ).getPropertyValue('--white')
+      const setCSSVar = document.documentElement.style
+      if (whiteVar == '#F5F5F5') {
+        setCSSVar.setProperty('--white', '#161513')
+        setCSSVar.setProperty('--black', '#f5f5f5')
+      } else {
+        setCSSVar.setProperty('--black', '#161513')
+        setCSSVar.setProperty('--white', '#F5F5F5')
+      }
+    },
+  },
+})
 </script>

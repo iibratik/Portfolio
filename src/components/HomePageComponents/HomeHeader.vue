@@ -13,6 +13,7 @@
             .header-btns
                 black-btn Got a project?
                 white-btn Let's talk.
+        img(src="@/assets/img/header-main.png")
 </template>
 
 <script lang="ts">
