@@ -1,9 +1,15 @@
 .under-header
     background: var(--black)
-    transform: rotate(-3deg)
+    transform: rotate(-2.5deg)
     width: 101%
     position: relative
+    margin-bottom: 120px
     left: -0.5%
+    overflow: hidden
+    display: flex
+    align-items: center
+    margin-top: 120px
+    justify-content: space-between
     &__list
         display: flex
         gap: 30px
@@ -12,12 +18,13 @@
         width: 20px
         height: 20px
         background: url(@/assets/img/decor-star-little.svg)
-        animation: scaleAndRotate 5s infinite linear
+        animation: rotate360 5s infinite linear
     &__lists
+        animation: moveRight 15s infinite linear
         display: flex
         align-items: center
-        margin-top: 70px
-        padding: 30px 80px 30px 40px
+        flex-grow: 1
+        padding: 20px 80px 20px 40px
         justify-content: space-between
     & span
         color: var(--white)
