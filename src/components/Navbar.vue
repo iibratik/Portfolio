@@ -11,11 +11,11 @@ nav.navbar
             li.navbar__list
                 router-link.navbar__link(to="/contact") Contact
         .navbar__btns
-          icon-btn(@click="switchTheme")
-            transition(name="switching-icons")
-              i.fas.fa-moon(v-if="themeVar")
-              i.fas.fa-sun(v-else)
-          white-btn(@click="$router.push('/contacts')") Let's talk
+              icon-btn(@click="switchTheme" v-show="themeVar")
+                  i.fas.fa-moon
+              icon-btn(@click="switchTheme" v-show="!themeVar")
+                  i.fas.fa-sun
+              white-btn(@click="$router.push('/contacts')") Let's talk
 </template>
 
 <script lang="ts">
