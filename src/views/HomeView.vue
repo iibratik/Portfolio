@@ -2,18 +2,24 @@
 .home-page
     HomeHeaderVue
     HeaderUnderVue
-    AboutView
+    HomeAbout
+    HomeInfo
+    Portfolio
 </template>
 
-<script lang="ts">
-    import HomeHeaderVue from '@/components/HomePageComponents/HomeHeader.vue';
-    import HeaderUnderVue from '@/components/HomePageComponents/HeaderUnder.vue';
-    import AboutView from '@/views/AboutView.vue';
-    export default {
-        components:{
-            HomeHeaderVue,
-            HeaderUnderVue,
-            AboutView,
-        }
-}
+<script>
+import HomeHeaderVue from "@/components/HomePageComponents/HomeHeader.vue";
+import HeaderUnderVue from "@/components/HomePageComponents/HomeUnderHeader.vue";
+import HomeAbout from "@/components/HomePageComponents/HomeAbout.vue";
+import HomeInfo from "@/components/HomePageComponents/HomeInfo.vue";
+import Portfolio from "@/components/Portfolio.vue";
+export default {
+  components: {
+    HomeHeaderVue,
+    HeaderUnderVue,
+    HomeAbout,
+    HomeInfo,
+    Portfolio,
+  },
+};
 </script>

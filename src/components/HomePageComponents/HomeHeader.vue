@@ -16,7 +16,7 @@
         img(src="@/assets/img/header-main.png")
 </template>
 
-<script lang="ts">
+<script>
     export default {
 
     }

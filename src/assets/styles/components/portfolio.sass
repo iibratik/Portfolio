@@ -1,0 +1,57 @@
+.portfolio
+    padding-top: 60px
+    padding-bottom: 120px
+    &-title
+        font-size: 45px
+        line-height: 56px
+        margin-bottom: 17px
+        text-align: center
+        letter-spacing: 1.44px
+
+    &-body
+        margin-bottom: 60px
+        font-size: 18px
+        line-height: 32px
+        text-align: center
+        letter-spacing: 1.44px
+        text-transform: uppercase
+    &-content
+        display: flex
+        flex-direction: column
+        gap: 50px
+    &__card
+        display: flex
+        gap: 50px
+        align-items: center
+        &:nth-child(even)
+            flex-direction: row-reverse
+        img
+            width: 40%
+        .card
+            &__left
+                text-align: center
+            &__title
+                text-transform: uppercase
+                font-size: 45px
+                line-height: 56px
+                letter-spacing: 1.44px
+                margin-bottom: 30px
+            &__link
+                background: var(--blue)
+                color: white
+                padding: 10px
+                border-radius: 15px
+                &:hover
+                    background: var(--black)
+                    color: var(--white)
+                    text-align: center
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        background: url(@/assets/img/big-star-decor.svg)
+        width: 40px
+        height: 40px
+        left: 49%
+        top: -1%
+        animation: rotate360 3s infinite linear

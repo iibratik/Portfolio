@@ -1,0 +1,38 @@
+.home-info
+    &__title
+        text-transform: uppercase
+        font-size: 56px
+        line-height: 64px
+        text-align: center
+    &__card
+        display: flex
+        padding: 22px 0
+        flex-direction: column
+        align-items: center
+        width: 100%
+        border: 1px solid var(--black)
+        &:hover
+            background: var(--black)
+            border: 1px solid var(--black)
+            & p
+                color: var(--white)
+            & h2
+                color: var(--white)
+        &:nth-child(even)
+            background: var(--black)
+            border-left: none
+            border-right: none
+            & p
+                color: var(--white)
+            & h2
+                color: var(--white)
+            &:hover
+                background: var(--white)
+                & p
+                    color: var(--black)
+                & h2
+                    color: var(--black)
+    &-content
+        display: flex
+        justify-content: space-between
+    margin-bottom: 120px

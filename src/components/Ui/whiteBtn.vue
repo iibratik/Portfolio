@@ -3,7 +3,7 @@ button.white-btn
     slot
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'white-btn',

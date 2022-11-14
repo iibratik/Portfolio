@@ -3,8 +3,8 @@ button.icon-btn
     slot
 </template>
 
-<script lang="ts">
-    export default {
+<script>
+    export default{
         name:'icon-btn'
     }
 </script>

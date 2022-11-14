@@ -3,10 +3,10 @@
     ul.under-header__lists
         li.under-header__list(v-for="list in underHeaderNav" :key="list.id")
             span {{list.text}}
-            .under-header__decor 
+            .under-header__decor
 </template>
 
-<script lang="ts">
+<script>
 export default {
     data(){
         return{

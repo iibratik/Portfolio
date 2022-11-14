@@ -18,15 +18,34 @@ nav.navbar
               white-btn(@click="$router.push('/contacts')") Let's talk
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-export default defineComponent({
+<script>
+export default{
   data() {
     return {
       themeVar: true,
     }
   },
   methods: {
+    scrollHight() {
+      const navbarLinks = document.querySelectorAll('.navbar__link')
+      const navbar = document.querySelector('.navbar')
+      navbarLinks.forEach((link) => {
+        if (window.scrollY >= 10) {
+          link.style.color = 'var(--black)'
+          navbar.style.background = 'var(--white)'
+          navbar.style.position = 'fixed'
+          navbar.style.top = "0"
+          navbar.style.zIndex = "999"
+          navbar.style.width = "100%"
+        } else {
+          link.style.color = 'var(--black)'
+          navbar.style.transform = 'translateX(0)'
+          navbar.style.left = '0'
+          navbar.style.background = 'none'
+          navbar.style.position = 'relative'
+        }
+      })
+    },
     switchTheme() {
       this.themeVar = !this.themeVar
       const whiteVar = getComputedStyle(
@@ -42,5 +61,8 @@ export default defineComponent({
       }
     },
   },
-})
+  created() {
+    window.addEventListener('scroll', this.scrollHight)
+  },
+}
 </script>
