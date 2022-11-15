@@ -31,6 +31,7 @@ export default{
       const navbar = document.querySelector('.navbar')
       navbarLinks.forEach((link) => {
         if (window.scrollY >= 10) {
+          navbar.style.filter = "drop-shadow(20px 10px 12px rgba(0, 0, 0, 0.3))"
           link.style.color = 'var(--black)'
           navbar.style.background = 'var(--white)'
           navbar.style.position = 'fixed'
@@ -38,6 +39,7 @@ export default{
           navbar.style.zIndex = "999"
           navbar.style.width = "100%"
         } else {
+          navbar.style.filter = "none "
           link.style.color = 'var(--black)'
           navbar.style.transform = 'translateX(0)'
           navbar.style.left = '0'

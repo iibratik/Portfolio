@@ -1,0 +1,53 @@
+@media (max-width:1200px){
+    .under-header__list{
+        gap: 15px;
+        & span{
+            font-size: 14px;
+        }
+    }
+    .home-header-title{
+        font-size: 33px;
+        &::before{
+            right: 44%;
+        }
+    }
+    .portfolio{
+        &::after{
+            right: -15%;
+            z-index: -1;
+        }
+    }
+}
+@media (max-width:968px){
+    .home-header-title{
+        font-size: 27px;
+        &::before{
+            right: 49%;
+        }
+    }
+    .under-header__lists{
+        padding: 20px 30px 20px 30px;
+    }
+    .about-me__text{
+        &-header{
+            font-size: 27px;
+            max-width: 450px;
+        }
+        &-body{
+            max-width: 450px;
+        }
+    }
+    .home-header .header-list:nth-child(3) a::before{
+        left: -22%;
+    }
+    .home-header .header-lists{
+
+        & a::before{
+            left: -15%;
+        }
+        gap: 30px;
+    }
+}
+@media (max-width:768px ){
+
+}

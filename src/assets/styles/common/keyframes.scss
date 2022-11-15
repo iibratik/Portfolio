@@ -1,9 +1,9 @@
-@keyframes rotation360 {
+@keyframes rotation-360 {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotate(-359deg);
   }
 }
 @keyframes rotate360 {
@@ -11,14 +11,17 @@
         transform: rotate(0deg);
     }
     to{
-        transform: rotate(-359deg);
+        transform: rotate(359deg);
     }
 }
 @keyframes moveRight {
-     from{
+     0%{
       transform: translateX(0);
      }
-     to{
+     90%{
       transform: translateX(100%);
+     }
+     100%{
+      transform: translateX(0);
      }
 }
