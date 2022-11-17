@@ -1,5 +1,7 @@
 .navbar
     padding: 5px 0
+    position: relative
+    z-index: 999
     &-content
         display: flex
         justify-content: space-between
@@ -37,3 +39,18 @@
             padding: 10px
             background: none
             transition: all 1s ease-out
+.desctop-nav
+    & .burger-menu
+        display: none
+.mobile-nav
+    position: relative
+    height: 1000%
+    top: 0
+    left: 0
+    width: 100%
+    position: fixed
+    z-index:-1
+    background: var(--white)
+    & .navbar
+        &__lists
+            flex-direction: column
