@@ -109,3 +109,50 @@
     font-size: 18px;
   }
 }
+@media(max-width:500px){
+  .header-lists{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .under-header{
+    width: 110%;
+    left: -3%;
+    &__lists{
+      animation: none;
+    }
+  }
+  .about-me__text{
+    &-header{
+      font-size: 24px;
+      text-align: center;
+    }
+    &-body{
+      font-size: 16px;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+  .home-info-content{
+    flex-wrap: wrap;
+  }
+  .home-header-title::before{
+    display: none;
+  }
+  .home-header .header-lists a{
+    font-size: 18px;
+  }
+  .header-btns{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-content{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .portfolio__card{
+    flex-direction: column;
+    &:nth-child(even){
+      flex-direction: column;
+    }
+  }
+}
